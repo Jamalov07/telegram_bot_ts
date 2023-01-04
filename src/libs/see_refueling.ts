@@ -2,7 +2,10 @@ import { Context, Markup } from 'telegraf'
 
 export async function selectCategoryRefuelingUZB(ctx: Context) {
   return ctx.reply('Izlash uchun toifani tanlang 👇', {
-    ...Markup.keyboard([["Manzil bo'yicha", "Qaysi yoqilg'i quyishi bo'yicha"]])
+    ...Markup.keyboard([
+      ["Manzil bo'yicha", "Yoqilg'i turi bo'yicha"],
+      ["Yaqinligi bo'yicha", 'Barchasini'],
+    ])
       .oneTime()
       .resize(),
   })

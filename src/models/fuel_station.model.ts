@@ -1,8 +1,7 @@
-import { DataTypes } from 'sequelize'
 import { sequelize } from '../core/db.js'
-
-export const Fuel = sequelize.define(
-  'fuels',
+import { DataTypes } from 'sequelize'
+export const FuelStation = sequelize.define(
+  'fuel_station',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,6 +10,7 @@ export const Fuel = sequelize.define(
       unique: true,
     },
     name: { type: DataTypes.STRING },
+    location: { type: DataTypes.STRING },
   },
   {
     timestamps: false,

@@ -16,12 +16,6 @@ export async function asosiyMenuUZB(ctx: Context) {
 export async function asosiyMenuRUS(ctx: Context) {
   return await ctx.reply(`<b>Главная страница!</b>`, {
     parse_mode: 'HTML',
-    ...Markup.keyboard([
-      ['⛽️ Просмотр заправок'],
-      ['👀 Мои заправки', '➕ Добавить Заправку'],
-      ['Tilni tanlash / Выбор языка'],
-    ])
-      .oneTime()
-      .resize(),
+    
   })
 }

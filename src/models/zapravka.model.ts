@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize'
 import { sequelize } from '../core/db.js'
 
-export const Refueling = sequelize.define('refuelings', {
+export const Station = sequelize.define('stations', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -9,13 +9,13 @@ export const Refueling = sequelize.define('refuelings', {
     unique: true,
   },
   user_id: { type: DataTypes.INTEGER },
-  name: { type: DataTypes.STRING },
-  address: { type: DataTypes.STRING },
-  location: { type: DataTypes.STRING },
-  phone: { type: DataTypes.STRING },
+  main_name: { type: DataTypes.STRING },
+  branch_name: { type: DataTypes.STRING },
   region_id: { type: DataTypes.INTEGER },
   city_id: { type: DataTypes.INTEGER },
   district_id: { type: DataTypes.INTEGER },
+  address: { type: DataTypes.STRING },
+  location: { type: DataTypes.STRING },
+  phone_number: { type: DataTypes.STRING },
   last_state: { type: DataTypes.STRING },
 })
-
